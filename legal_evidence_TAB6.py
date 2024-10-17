@@ -6,6 +6,15 @@ import requests
  
 
 api_key = st.secrets["OPENAI_API_KEY"]
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
  
 # Function to encode the image
 def encode_image(image_path):
